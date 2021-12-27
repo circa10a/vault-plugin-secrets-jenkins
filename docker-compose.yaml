@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  jenkins:
+    container_name: jenkins
+    build:
+      context: .
+      dockerfile: Dockerfile.jenkins
+    ports:
+    - 8080:8080
+
+  vault:
+    container_name: vault
+    build:
+      context: .
+      dockerfile: Dockerfile.vault
+    ports:
+      - 8200:8200
+    command: server -dev -dev-root-token-id=root -dev-plugin-dir=/vault/plugins
+    depends_on:
+        - jenkins
+    volumes:
+      - ./vault/plugins:/vault/plugins
