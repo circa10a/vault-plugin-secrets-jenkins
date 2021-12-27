@@ -1,0 +1,8 @@
+FROM golang
+WORKDIR /tmp/build
+COPY . .
+RUN GOOS=linux; go mod tidy && \
+    go build -ldflags="-s -w" -o vault-plugin-secrets-jenkins
+
+FROM vault
+COPY --from=0 --chown=vault /tmp/build/vault-plugin-secrets-jenkins /vault/plugins/
