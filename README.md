@@ -82,7 +82,7 @@ Success! Data written to: jenkins/config
 You may first want to setup a default TTL on all tokens created, you can do so by writing to the `/tokens/tune` endpoint of the plugin like so, otherwise the system default of `768h` (32 days) is used:
 
 ```shell
-vault write sys/mounts/jenkins/tokenstune default_lease_ttl=5m
+vault write sys/mounts/jenkins/tokens/tune default_lease_ttl=5m
 Success! Data written to: sys/mounts/jenkins/tokens/tune
 ```
 
