@@ -3,7 +3,7 @@ package jenkinssecretsengine
 import (
 	"errors"
 
-	"github.com/circa10a/gojenkins"
+	"github.com/bndr/gojenkins"
 )
 
 // jenkinsClient creates an object storing
