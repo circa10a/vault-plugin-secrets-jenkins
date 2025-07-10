@@ -4,7 +4,7 @@
 [![PkgGoDev](https://pkg.go.dev/badge/github.com/circa10a/vault-plugin-secrets-jenkins)](https://pkg.go.dev/github.com/circa10a/vault-plugin-secrets-jenkins?tab=overview)
 [![Go Report Card](https://goreportcard.com/badge/github.com/circa10a/vault-plugin-secrets-jenkins)](https://goreportcard.com/report/github.com/circa10a/vault-plugin-secrets-jenkins)
 
-<img align="right" src="/images/jenkins-vault.png" width="30%" height="20%"/>
+<img align="right" src="/images/jenkins-vault.png" width="30%" />
 
 This is a backend plugin to be used with [Hashicorp Vault](https://www.github.com/hashicorp/vault).
 This plugin generates ephemeral Jenkins Users and API tokens.
